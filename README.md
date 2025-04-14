@@ -46,13 +46,21 @@ A powerful, user-friendly application for solving complex calculus expressions, 
 
 ## Usage
 
-Run the application:
+### Option 1: Run Locally
+
+Run the application on your local machine:
 
 ```bash
 streamlit run combined_calculus_solver.py
 ```
 
 The application will open in your default web browser.
+
+### Option 2: Use the Deployed Version
+
+Access the live version of the application directly at:
+
+[https://advanced-calculus.streamlit.app/](https://advanced-calculus.streamlit.app/)
 
 ## Expression Syntax
 
@@ -90,3 +98,63 @@ The application will open in your default web browser.
 - **streamlit**: For the web interface
 - **sympy**: For symbolic mathematics and calculus operations
 - **re**: For regular expression parsing
+
+## Technical Approach
+
+### Architecture
+
+The Advanced Calculus Solver is built using a modular architecture that separates concerns:
+
+1. **User Interface Layer** (Streamlit)
+
+   - Provides an intuitive interface for expression input
+   - Displays results in a clean, formatted manner
+   - Offers symbol selection for complex mathematical notation
+
+2. **Expression Parsing Layer**
+
+   - Implements regex-based parsing to handle implicit multiplication
+   - Converts user-friendly notation to SymPy-compatible format
+   - Validates input expressions before processing
+
+3. **Computational Core** (SymPy)
+   - Performs symbolic mathematics operations
+   - Handles calculus operations (derivatives, integrals, limits)
+   - Simplifies expressions for cleaner output
+
+### Key Implementation Features
+
+1. **Unified Expression Handling**
+
+   - Single input field that intelligently detects operation type
+   - Pattern recognition for derivatives, integrals, and limits
+   - Support for nested operations (e.g., derivative of an integral)
+
+2. **Automatic Multiplication Detection**
+
+   - Converts expressions like "2x" to "2\*x" automatically
+   - Handles complex cases like "(x+1)(x-1)" → "(x+1)\*(x-1)"
+   - Preserves function notation (e.g., "sin(x)" remains unchanged)
+
+3. **Error Handling**
+   - Provides meaningful error messages for invalid expressions
+   - Gracefully handles edge cases and syntax errors
+   - Guides users toward correct syntax
+
+### Performance Considerations
+
+- Lazy evaluation of expressions to improve performance
+- Caching of results to avoid redundant calculations
+- Efficient parsing algorithms to handle complex expressions
+
+## Credits
+
+This project is authored and maintained by **[Abhijeet Panda](https://github.com/ImAbhijeetPanda)**.
+
+## Contact
+
+For any questions or feedback, feel free to reach out:
+
+- **Email**: [iamabhijeetpanda@gmail.com](mailto:iamabhijeetpanda@gmail.com)
+- **LinkedIn**: [Abhijeet Panda](https://www.linkedin.com/in/imabhijeetpanda)
+- **GitHub**: [ImAbhijeetPanda](https://github.com/ImAbhijeetPanda)
