@@ -611,6 +611,9 @@ def main():
     st.markdown("<h1 class='main-header'>Advanced Calculus Solver</h1>", unsafe_allow_html=True)
     st.markdown("<p class='subheader'>Solve complex calculus expressions with derivatives, integrals, and limits</p>", unsafe_allow_html=True)
 
+    # Add GitHub repository link
+    st.markdown("<p style='text-align: center; margin-bottom: 20px;'><a href='https://github.com/ImAbhijeetPanda/advanced-calculus-solver' target='_blank'>View Abhijeet's GitHub</a> for complete documentation and source code</p>", unsafe_allow_html=True)
+
     # Notation examples with a proper header
     st.markdown("""<h3 style='margin: 0.5rem 0 1rem 0.5rem; font-size: 1.4rem; display: flex; align-items: center;'>
         <span style='font-weight: 700; letter-spacing: 1px;'>NOTATION EXAMPLES</span>
